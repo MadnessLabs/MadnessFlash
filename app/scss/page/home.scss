@@ -1,0 +1,58 @@
+// IMPORTS
+@import "../variables";
+
+// PAGE STYLES
+.state-home{
+    @media (max-width: $screen-xl) {
+
+    }
+
+    @media (max-width: $screen-lg) {
+
+    }
+
+    @media (max-width: $screen-md) {
+
+    }
+
+    @media (max-width: $screen-sm) {
+
+    }
+
+    @media (max-width: $screen-xs) {
+
+    }
+    .welcome{
+        background-color: grey;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        width: 50%;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    .welcome h1{
+        text-align: center;
+        color: white;
+    }
+    .welcome p{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+    .equation{
+        background-color: grey;
+    }
+    .equation span{
+        margin-top: 10px;
+        margin-left: 30%;
+        font-size: 60px;
+        display: block;
+        width: 100%;
+    }
+    .equation button{
+        bottom: 15px;
+        right: 30px;
+        font-size: 30px;
+        position: absolute;
+    }
+}
