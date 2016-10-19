@@ -1,16 +1,17 @@
-ion-view(view-title='home')
+ion-view(view-title='MadnessFlash')
     ion-content(class='state-home')
-        .card(ng-show="ctrl.showWelcome")
-            h1 Hello There!
-            p
-                | We're here to help you learn what you struggle with starting with simple math. This website / app is a flash card assimilation for repetetive easy learning, just like when you were in elementary school. Maybe you want a refresher or you just never learned all these skills, but it's okay and we are here to help you do that. Over time the app will learn what you struggle with most and give you a report card / dashboard of all your progress.
-            ul
+        .card
+            .welcome(ng-show="ctrl.showWelcome")
+                h1 Hello There!
+                p
+                    | We're here to help you learn what you struggle with starting with simple math. This website / app is a flash card assimilation for repetetive easy learning, just like when you were in elementary school. Maybe you want a refresher or you just never learned all these skills, but it's okay and we are here to help you do that. Over time the app will learn what you struggle with most and give you a report card / dashboard of all your progress.
+            ul(ng-hide="ctrl.showWelcome")
                 li(ng-click="ctrl.newEquation('addition')") Addition
                 li(ng-click="ctrl.newEquation('subtraction')") Subtraction
                 li(ng-click="ctrl.newEquation('multiplication')") Multiplication
                 li(ng-click="ctrl.newEquation('division')") Division
-        .card.equation(ng-hide="ctrl.showWelcome")
-            h1 {{ctrl.equationType}}
-            span {{ctrl.equation}}
-        button(ng-click="ctrl.newEquation(ctrl.equationType)") Flip {{ctrl.valueOne}}
+            .equation(ng-hide="ctrl.showWelcome")
+                h1 {{ctrl.equationType}}
+                span {{ctrl.equation}}
+            button.button.button-large.button-energized(ng-click="ctrl.newEquation(ctrl.equationType)") Flip {{ctrl.valueOne}}
     

@@ -47,25 +47,25 @@ body {
     background-color: $theme-dark-gray;
 }
 
-.nav-bar-block{
-    ion-header-bar {
-        .title, .title-left {
-            text-align: center !important;
-            text-indent: 0;
-            left: 0 !important;
-            right: 0 !important;
-        }
-        @media (min-width: $screen-sm) {
-            .title {
-                text-indent: 275px;
-            }
-        }
+// .nav-bar-block{
+//     ion-header-bar {
+//         .title, .title-left {
+//             text-align: center !important;
+//             text-indent: 0;
+//             left: 0 !important;
+//             right: 0 !important;
+//         }
+//         @media (min-width: $screen-sm) {
+//             .title {
+//                 text-indent: 275px;
+//             }
+//         }
 
-        .ion-android-search {
-            transform: rotateY(180deg);
-        }
-    }
-}
+//         .ion-android-search {
+//             transform: rotateY(180deg);
+//         }
+//     }
+// }
 
 .buttons-left.header-item{
     display: block;
