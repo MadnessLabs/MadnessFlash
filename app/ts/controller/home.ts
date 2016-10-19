@@ -6,7 +6,7 @@ module MadnessFlash {
         valueOne: number;
         valueTwo: number;
         showWelcome: boolean;
-        equation: string;
+        equation: string; 
         equationType: string;
         answer: number;
 
@@ -15,6 +15,12 @@ module MadnessFlash {
             this.valueOne = 1;
             this.valueTwo = 1; 
             this.showWelcome = true;   
+        }
+        
+        equationPick() {
+            // pick equation type
+            this.showWelcome = false;
+            this.equationType = null;
         }
 
         newEquation(type:string) {
@@ -33,14 +39,16 @@ module MadnessFlash {
                 operator = '/';
                 this.answer = this.valueOne / this.valueTwo;
             }
-            this.equation = this.valueOne + operator + this.valueTwo + ' = ' + this.answer;
-            this.showWelcome = false;
+            this.equation = this.valueOne + operator + this.valueTwo;
             this.valueTwo += 1;
 
             if (this.valueTwo === 13) {
                 this.valueTwo = 1;
                 this.valueOne += 1;
             }
+        }
+        equationAnswer() {
+            // answer to equation
         }
     }
 
