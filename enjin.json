@@ -53,7 +53,7 @@
         "srcDir": "app/scss/",
         "vars": {
             "theme": {
-                "primary": "darkgoldenrod",
+                "primary": "#C4A02C",
                 "secondary": "#0090ED",
                 "warning": "#EF473A",
                 "dark-gray": "#666666",

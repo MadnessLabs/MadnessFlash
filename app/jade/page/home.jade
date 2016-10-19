@@ -13,5 +13,14 @@ ion-view(view-title='MadnessFlash')
             .equation(ng-hide="ctrl.showWelcome")
                 h1 {{ctrl.equationType}}
                 span {{ctrl.equation}}
-            button.button.button-large.button-energized(ng-click="ctrl.newEquation(ctrl.equationType)") Flip {{ctrl.valueOne}}
-    
+            button.button(ng-click="ctrl.newEquation(ctrl.equationType)") Flip
+            .pick(ng-click="ctrl.newEquation(ctrl.equationType)")
+                .row
+                    .col-xs-6
+                        a.button.button-clear.icon.ion-plus
+                    .col-xs-6
+                        a.button.button-clear.icon.ion-minus
+                    .col-xs-6
+                        a.button.button-clear.icon.ion-asterisk
+                    .col-xs-6
+                        a.button.button-clear.icon /

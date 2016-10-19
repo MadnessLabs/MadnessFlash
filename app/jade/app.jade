@@ -23,7 +23,10 @@ html(lang="en")
     body(ng-app=name)
         ion-nav-bar.bar-positive.has-tabs-top
             ion-nav-buttons(side='left')
-                button.button.button-icon.icon.ion-navicon(ng-click="$root.toggleMenu()")
+                button.button.button-clear.icon.ion-information-circled
+            ion-nav-buttons(side='right')
+                button.button.button-clear.icon.ion-person
+            //-     button.button.button-icon.icon.ion-navicon(ng-click="$root.toggleMenu()")
             // Run 'gulp add-page --n=search' and uncomment the line below
             //ion-nav-buttons(side="right")
                 a.button.button-icon.icon.ion-android-search(ui-sref="search")
