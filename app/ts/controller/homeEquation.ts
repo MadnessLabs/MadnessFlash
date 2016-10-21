@@ -9,14 +9,14 @@ module MadnessFlash {
         equationType: string;
         answer: number;
 
-        constructor() {
+        constructor(protected $stateParams) {
             // ON LOAD 
             this.valueOne = 1;
             this.valueTwo = 1;    
+            this.newEquation(this.$stateParams.type);
         }
 
         newEquation(type:string) {
-            this.equationType = type;
             var operator = '';
             if (type === 'addition') {
                 operator = '+';

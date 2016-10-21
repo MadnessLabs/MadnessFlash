@@ -36,7 +36,7 @@
         "views": {
             "card": {
                 "templateUrl": "html/page/homePick.html",
-                "controller": "MadnessFlash.HomePickController as ctrl"
+                "controller": "MadnessFlash.HomePickController as pick"
             }
         }
     }, {
@@ -45,16 +45,16 @@
         "views": {
             "card": {
                 "templateUrl": "html/page/homeProfile.html",
-                "controller": "MadnessFlash.HomeProfileController as ctrl"
+                "controller": "MadnessFlash.HomeProfileController as profile"
             }
         }
     }, {
         "state": "home.equation",
-        "url": "/equation",
+        "url": "/equation/:type",
         "views": {
             "card": {
                 "templateUrl": "html/page/homeEquation.html",
-                "controller": "MadnessFlash.HomeEquationController as ctrl"
+                "controller": "MadnessFlash.HomeEquationController as equation"
             }
         }
     }, {
@@ -63,7 +63,7 @@
         "views": {
             "card": {
                 "templateUrl": "html/page/homeAnswer.html",
-                "controller": "MadnessFlash.HomeAnswerController as ctrl"
+                "controller": "MadnessFlash.HomeAnswerController as answer"
             }
         }
     }],

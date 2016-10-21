@@ -3,8 +3,16 @@ module MadnessFlash {
     'use strict';
 
     class HomeWelcomeController {
+        message: {
+            title: string,
+            body?: string
+        };
+
         constructor() {
             // ON LOAD       
+            this.message = {
+                title: 'Hello There!'
+            };  
         }
     }
 
