@@ -1,0 +1,5 @@
+.state-homeEquation
+    .equation(ng-hide="ctrl.showWelcome" ng-show="ctrl.equationType")
+        span {{ctrl.equation}}
+    a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.pick") Back
+    a.button.icon.icon-right.ion-chevron-right.answer(ui-sref="home.answer") Answer

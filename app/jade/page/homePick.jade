@@ -1,11 +1,12 @@
-.pick
-    .row
-        .col-xs-6
-            a.button.button-clear.icon.ion-plus(ng-click="ctrl.newEquation('addition')") Addition
-        .col-xs-6
-            a.button.button-clear.icon.ion-minus(ng-click="ctrl.newEquation('subtraction')") Subtraction
-        .col-xs-6
-            a.button.button-clear.icon.ion-asterisk(ng-click="ctrl.newEquation('multiplication')") Multiplication
-        .col-xs-6
-            a.button.button-clear.icon(ng-click="ctrl.newEquation('division')") / Division
-        
+.state-homePick
+    .pick
+        .row
+            .col-xs-6
+                a.button.button-clear.icon.ion-plus(ng-click="ctrl.newEquation('addition')") Addition
+            .col-xs-6
+                a.button.button-clear.icon.ion-minus(ng-click="ctrl.newEquation('subtraction')") Subtraction
+            .col-xs-6
+                a.button.button-clear.icon.ion-asterisk(ng-click="ctrl.newEquation('multiplication')") Multiplication
+            .col-xs-6
+                a.button.button-clear.icon(ng-click="ctrl.newEquation('division')") / Division
+    a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.welcome") Back 

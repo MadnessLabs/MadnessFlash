@@ -22,4 +22,27 @@
     @media (max-width: $screen-xs) {
 
     }
+  
+    .welcome{
+        padding: 10px;
+        color: #737373;
+        h1{
+            text-align: center;
+            color: #737373;
+            padding-top: 32px;
+            padding-right: 15px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        .flip{
+            border-radius: 0px;
+            top: 0px;
+            right: 0px;
+            position: absolute;
+            background-color: #D1AA2F;
+            color: #ffffff;
+        }
+    }
 }

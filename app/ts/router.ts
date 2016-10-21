@@ -17,7 +17,13 @@ module MadnessFlash {
 'controller':'MadnessFlash.HomePickController as ctrl'}}})
 				.state('home.profile', {'url':'/profile', 
 'views':{'card':{'templateUrl':'html/page/homeProfile.html', 
-'controller':'MadnessFlash.HomeProfileController as ctrl'}}});
+'controller':'MadnessFlash.HomeProfileController as ctrl'}}})
+				.state('home.equation', {'url':'/equation', 
+'views':{'card':{'templateUrl':'html/page/homeEquation.html', 
+'controller':'MadnessFlash.HomeEquationController as ctrl'}}})
+				.state('home.answer', {'url':'/answer', 
+'views':{'card':{'templateUrl':'html/page/homeAnswer.html', 
+'controller':'MadnessFlash.HomeAnswerController as ctrl'}}});
 
             $urlRouterProvider.otherwise(function($injector, $location) {
                 var $state = $injector.get('$state');

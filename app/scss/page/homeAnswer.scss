@@ -2,7 +2,7 @@
 @import "../variables";
 
 // PAGE STYLES
-.state-home{
+.state-homeAnswer{
     @media (max-width: $screen-xl) {
 
     }
@@ -22,8 +22,4 @@
     @media (max-width: $screen-xs) {
 
     }
-    background-color: #737373;
-    .card{
-        position: relative;
-    }    
 }
