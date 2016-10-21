@@ -2,11 +2,11 @@
     .pick
         .row
             .col-xs-6
-                a.button.button-clear.icon.ion-plus(ui-sref="home.equation({type: 'addition'})") Addition
+                a.button.button-clear.icon.ion-plus(ui-sref="home.equation({type: 'addition'})" ng-click="ctrl.setType('addition')") Addition
             .col-xs-6
-                a.button.button-clear.icon.ion-minus(ui-sref="home.equation({type: 'subtraction'})") Subtraction
+                a.button.button-clear.icon.ion-minus(ui-sref="home.equation({type: 'subtraction'})" ng-click="ctrl.setType('subtraction')") Subtraction
             .col-xs-6
-                a.button.button-clear.icon.ion-asterisk(ui-sref="home.equation({type: 'multiplication'})") Multiplication
+                a.button.button-clear.icon.ion-asterisk(ui-sref="home.equation({type: 'multiplication'})" ng-click="ctrl.setType('multiplication')") Multiplication
             .col-xs-6
-                a.button.button-clear.icon(ui-sref="home.equation(type: {'division'})") / Division
+                a.button.button-clear.icon(ui-sref="home.equation({type: 'division'})" ng-click="ctrl.setType('division')") / Division
     a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.welcome") Back 

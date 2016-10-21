@@ -3,16 +3,15 @@ module MadnessFlash {
     'use strict';
 
     class HomeController {
-        valueOne: number;
-        valueTwo: number;
-        equation: string; 
-        equationType: string;
-        answer: number;
+        type: string;
 
         constructor() {
             // ON LOAD 
-            this.valueOne = 1;
-            this.valueTwo = 1;   
+              
+        }
+
+        setType(type) {
+            this.type = type;
         }
     }
 

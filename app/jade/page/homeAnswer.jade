@@ -1,5 +1,5 @@
 .state-homeAnswer
     .equation
         span {{equation.answer}}
-    a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.equation") Back
+    a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.equation({type: ctrl.type})") Back
     a.button.icon.icon-right.ion-chevron-right.next(ui-sref="home.equation") Next

@@ -22,4 +22,48 @@
     @media (max-width: $screen-xs) {
 
     }
+
+    img{
+        max-height: 200px;
+        max-width: 200px;
+        padding: 15px;
+    }
+    h1{
+        color: #666;
+        padding-bottom: 15px;
+    }
+    .item.points{
+        border-top: 1px solid;
+        border-color: #ddd;
+    }
+    .pick{
+        padding: 0;
+        color: #737373;
+        .col-xs-6{
+            height: 100px;
+            .icon{
+                text-align: center;
+                width: 100%;
+                display: block;
+                font-size: 60px;
+                color: #666;
+                padding: 20px 0;
+                &:before {
+                    color: #666;
+                    font-size: 60px;
+                    height: 100px;
+                    padding-right: 10px;
+                }
+                span{
+                    vertical-align: super;
+                    font-size: 30px;
+                    color: #D1AA2F;
+                }
+            }
+        }
+    }
+    a.more{
+        color: #666666;
+        display: -webkit-box;
+    }   
 }

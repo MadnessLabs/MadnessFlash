@@ -9,7 +9,7 @@ module MadnessFlash {
         equationType: string;
         answer: number;
 
-        constructor(protected $stateParams) {
+        constructor(protected $stateParams, protected $scope) {
             // ON LOAD 
             this.valueOne = 1;
             this.valueTwo = 1;    
