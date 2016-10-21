@@ -1,22 +1,8 @@
 ion-view(view-title='MadnessFlash')
-    ion-content(class='state-home')
+    ion-content.state-home.has-header(padding="true")
         .card
-            .welcome(ng-show="ctrl.showWelcome")
-                h1 Hello There!
-                p
-                    | We're here to help you learn what you struggle with starting with simple math. This website / app is a flash card assimilation for repetetive easy learning, just like when you were in elementary school. Maybe you want a refresher or you just never learned all these skills, but it's okay and we are here to help you do that. Over time the app will learn what you struggle with most and give you a report card / dashboard of all your progress.
+            ui-view(name="card")
             .equation(ng-hide="ctrl.showWelcome" ng-show="ctrl.equationType")
                 span {{ctrl.equation}}
-            button.button.icon.icon-right.ion-chevron-right.flip(ng-click="ctrl.equationPick()") Flip
             button.button.icon.icon-left.ion-chevron-left.back(ng-show="ctrl.equationType" ng-click="ctrl.equationPick()") Back
             button.button.icon.icon-right.ion-chevron-right.answer(ng-show="ctrl.equationType" ng-click="ctrl.equationAnswer") Answer
-            .pick(ng-hide="ctrl.showWelcome || ctrl.equationType")
-                .row
-                    .col-xs-6
-                        a.button.button-clear.icon.ion-plus(ng-click="ctrl.newEquation('addition')") Addition
-                    .col-xs-6
-                        a.button.button-clear.icon.ion-minus(ng-click="ctrl.newEquation('subtraction')") Subtraction
-                    .col-xs-6
-                        a.button.button-clear.icon.ion-asterisk(ng-click="ctrl.newEquation('multiplication')") Multiplication
-                    .col-xs-6
-                        a.button.button-clear.icon(ng-click="ctrl.newEquation('division')") / Division

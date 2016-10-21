@@ -351,6 +351,7 @@ function setVars() {
     appIcon      = configJSON.img.favicon;
     appLocal     = configJSON.local;
     appMobile    = configJSON.mobile;
+    defaultRoute = configJSON.defaultRoute;
     appRoutes    = configJSON.routes;
     appUrl       = configJSON.url;
     appVersion   = configJSON.version;
@@ -1253,7 +1254,6 @@ gulp.task('remove-popover', function(done){
 
 gulp.task('router', function(){
     var routes = [];
-    var defaultRoute = false;
 
     for(var i=0; i < appRoutes.length; i++){
         var route = appRoutes[i];
