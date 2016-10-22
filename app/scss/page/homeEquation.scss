@@ -49,4 +49,17 @@
         background-color: #D1AA2F;
         color: #ffffff;
     }
+    
+    .answered{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        max-width: 200px;
+        border-color: #ddd !important;
+        border: 1px solid;
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    }
 }

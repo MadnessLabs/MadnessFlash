@@ -3,3 +3,5 @@
         span {{equation.equation}}
     a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.pick") Back
     a.button.icon.icon-right.ion-chevron-right.answer(ui-sref="home.answer" ng-click="ctrl.setAnswer(equation.answer)") Answer
+    .form
+        input.answered(type="number" placeholder="3")
