@@ -4,6 +4,9 @@
 body {
     @include clearfix();
     width: 100%;
+    .logo{
+        width: 43px;
+    }
 }
 
 .hide-sidebar{

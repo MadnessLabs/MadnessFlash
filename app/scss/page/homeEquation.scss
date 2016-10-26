@@ -3,26 +3,6 @@
 
 // PAGE STYLES
 .state-homeEquation{
-    @media (max-width: $screen-xl) {
-
-    }
-
-    @media (max-width: $screen-lg) {
-
-    }
-
-    @media (max-width: $screen-md) {
-
-    }
-
-    @media (max-width: $screen-sm) {
-
-    }
-
-    @media (max-width: $screen-xs) {
-
-    }
-    
     .equation{   
         span{
             margin-top: 150px;
@@ -61,5 +41,31 @@
             -webkit-appearance: none; 
             margin: 0; 
         }
+        &.right{
+            border-color: green !important;
+        }
+        &.wrong.ng-dirty.ng-not-empty{
+            border-color: red !important;
+        }
+    }
+    
+    @media (max-width: $screen-xl) {
+
+    }
+
+    @media (max-width: $screen-lg) {
+
+    }
+
+    @media (max-width: $screen-md) {
+
+    }
+
+    @media (max-width: $screen-sm) {
+
+    }
+
+    @media (max-width: $screen-xs) {
+
     }
 }

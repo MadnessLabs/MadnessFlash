@@ -9,17 +9,21 @@
                 .pick
                     .row
                         .col-xs-6
-                            .icon.ion-plus
-                                span +20
+                            .count
+                                i.icon.ion-plus
+                                span 20
                         .col-xs-6
-                            .icon.ion-minus
-                                span +10
+                            .count
+                                i.icon.ion-minus
+                                span 10
                         .col-xs-6
-                            .icon.ion-asterisk
-                                span +5
+                            .count
+                                i.icon.ion-asterisk
+                                span 5
                         .col-xs-6
-                            .icon /
-                                span +2
+                            .count
+                                i.icon.slash /
+                                span 2
             .item.item-divider Information
             label.item.item-input.item-stacked-label
                 span.input-label Nickname
@@ -28,3 +32,9 @@
                 span.input-label Login
                 input(type="text" placeholder="Google")
                 a.icon.ion-android-more-vertical.more
+            .item.item-toggle
+                | Random Numbers
+                label.toggle.toggle-positive
+                    input(type="checkbox")
+                    .track
+                        .handle

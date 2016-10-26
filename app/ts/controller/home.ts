@@ -7,9 +7,9 @@ module MadnessFlash {
         valueTwo: number;
         type: string;
         answer: number;
-        
+        guess: number;
 
-        constructor() {
+        constructor(protected $state) {
             // ON LOAD 
             this.reset(); 
         }
@@ -18,14 +18,23 @@ module MadnessFlash {
             this.type = type;
         }
 
+        makeGuess() {
+            if (this.answer === this.guess) {
+                this.valueTwo += 1;
+
+                if (this.valueTwo === 13) {
+                    this.valueTwo = 1;
+                    this.valueOne += 1;
+                }
+                this.$state.go('home.answer');
+                
+            } else {
+                alert('Try again!');
+            }
+        }
+
         setAnswer(number) {
             this.answer = number;
-            this.valueTwo += 1;
-
-            if (this.valueTwo === 13) {
-                this.valueTwo = 1;
-                this.valueOne += 1;
-            }
         }
 
         reset() {

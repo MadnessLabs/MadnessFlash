@@ -8,12 +8,13 @@ module MadnessFlash {
         equation: string; 
         equationType: string;
         answer: number;
+        parent: any;
 
         constructor(protected $stateParams, protected $scope) {
             // ON LOAD 
-            console.log($scope);
-            this.valueOne = this.$scope.$parent.$parent.ctrl.valueOne;
-            this.valueTwo = this.$scope.$parent.$parent.ctrl.valueTwo; 
+            this.parent = this.$scope.$parent.$parent.ctrl;
+            this.valueOne = this.parent.valueOne;
+            this.valueTwo = this.parent.valueTwo; 
             this.newEquation(this.$stateParams.type);
         }
 
@@ -33,6 +34,7 @@ module MadnessFlash {
                 this.answer = this.valueOne / this.valueTwo;
             }
             this.equation = this.valueOne + operator + this.valueTwo;
+            this.parent.setAnswer(this.answer);
         }
     }
 

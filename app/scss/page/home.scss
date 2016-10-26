@@ -3,6 +3,10 @@
 
 // PAGE STYLES
 .state-home{
+    background-color: #737373;
+    .card{
+        position: relative;
+    } 
     @media (max-width: $screen-xl) {
 
     }
@@ -21,9 +25,5 @@
 
     @media (max-width: $screen-xs) {
 
-    }
-    background-color: #737373;
-    .card{
-        position: relative;
-    }    
+    }   
 }

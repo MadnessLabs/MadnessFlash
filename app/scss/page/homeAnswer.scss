@@ -3,26 +3,6 @@
 
 // PAGE STYLES
 .state-homeAnswer{
-    @media (max-width: $screen-xl) {
-
-    }
-
-    @media (max-width: $screen-lg) {
-
-    }
-
-    @media (max-width: $screen-md) {
-
-    }
-
-    @media (max-width: $screen-sm) {
-
-    }
-
-    @media (max-width: $screen-xs) {
-
-    }
-
     .equation{   
         span{
             margin-top: 150px;
@@ -48,5 +28,25 @@
         position: absolute;
         background-color: #D1AA2F;
         color: #ffffff;
+    }
+    
+    @media (max-width: $screen-xl) {
+
+    }
+
+    @media (max-width: $screen-lg) {
+
+    }
+
+    @media (max-width: $screen-md) {
+
+    }
+
+    @media (max-width: $screen-sm) {
+
+    }
+
+    @media (max-width: $screen-xs) {
+
     }
 }
