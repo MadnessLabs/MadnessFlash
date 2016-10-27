@@ -3,8 +3,24 @@ module MadnessFlash {
     'use strict';
 
     class HomeProfileController {
-        constructor() {
-            // ON LOAD       
+        popover: any;
+
+        constructor(protected $scope, protected $ionicPopover) {
+            // ON LOAD  
+            
+            this.$ionicPopover.fromTemplateUrl('html/popover/profileLogin.html', {
+                scope: this.$scope,
+                'backdropClickToClose': true
+            }).then((popover) => {
+                this.popover = popover;
+            });
+         
+        }
+
+        selectProfilePopover($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+            this.popover.show($event);
         }
     }
 

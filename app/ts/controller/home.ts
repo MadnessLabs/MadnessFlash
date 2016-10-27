@@ -27,10 +27,11 @@ module MadnessFlash {
                     this.valueOne += 1;
                 }
                 this.$state.go('home.answer');
+                this.guess = null;
                 
             } else {
-                alert('Try again!');
-            }
+                alert('Try again!'); 
+            }     
         }
 
         setAnswer(number) {
