@@ -69,12 +69,14 @@
     }],
     "plugins": [
         "ionic",
-        "ngCordova"
+        "ngCordova",
+        "firebase"
     ],
     "google": {
         "analytics": {
             "key": false
-        }, "firbase": {
+        }, 
+        "firebase": {
             "apiKey": "AIzaSyCNfTXxUMRotMYN2w2T9r-a0lgbR_HfgYs",
             "authDomain": "madnessflash-b84ce.firebaseapp.com",
             "databaseURL": "https://madnessflash-b84ce.firebaseio.com",
@@ -163,7 +165,8 @@
         "libraries": [
             "node_modules/ionic-sdk/release/js/ionic.bundle.js",
             "node_modules/ng-cordova/dist/ng-cordova.js",
-            "node_modules/firebase/firebase.js"
+            "node_modules/firebase/firebase.js",
+            "node_modules/angularfire/dist/angularfire.js"
         ],
         "build": [
             "build/js/app.js",

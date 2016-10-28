@@ -4,7 +4,8 @@
     angular.module('MadnessFlash', [
         'MadnessFlash.config', 
         'ionic', 
-		'ngCordova'
+		'ngCordova', 
+		'firebase'
     ]);
 
 })();

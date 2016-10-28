@@ -1,6 +1,7 @@
 /// <reference path="../typings/index.d.ts"/>
 
 declare var ionic;
+declare var firebase;
 
 module MadnessFlash {
     'use strict';
@@ -17,6 +18,8 @@ module MadnessFlash {
             $ionicSideMenuDelegate,
             $http
         ) {
+            firebase.initializeApp(enjin.google.firebase);
+
             $rootScope.host = {
                 api: enjin.db.api.host.slice(0, -3),
                 apiFull: enjin.db.api.host,

@@ -19,6 +19,7 @@ module MadnessFlash {
         }
 
         newEquation(type:string) {
+            console.log(this.parent.randomize);
             var operator = '';
             if (type === 'addition') {
                 operator = '+';

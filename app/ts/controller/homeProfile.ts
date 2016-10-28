@@ -1,14 +1,17 @@
 /// <reference path="../../typings/index.d.ts"/>
+
 module MadnessFlash {
     'use strict';
 
     class HomeProfileController {
         popover: any;
 
-        constructor(protected $scope, protected $ionicPopover, firebase, protected enjin) {
+        constructor(
+            protected $scope, 
+            protected $ionicPopover, 
+            protected enjin
+        ) {
             // ON LOAD  
-            
-            firebase.initializeApp(enjin.google.firebase);
 
             this.$ionicPopover.fromTemplateUrl('html/popover/profileLogin.html', {
                 scope: this.$scope,

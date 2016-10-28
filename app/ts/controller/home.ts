@@ -1,4 +1,6 @@
 /// <reference path="../../typings/index.d.ts"/>
+declare var firebase;
+
 module MadnessFlash {
     'use strict';
 
@@ -8,10 +10,21 @@ module MadnessFlash {
         type: string;
         answer: number;
         guess: number;
+        randomize: any;
+        user: any;
 
-        constructor(protected $state) {
+        constructor(protected $state, protected enjin, protected $scope, $firebaseObject) {
             // ON LOAD 
-            this.reset(); 
+            this.reset();
+
+            var ref = firebase.database().ref('users/0');
+            // download the data into a local object
+            var syncObject = $firebaseObject(ref);
+            // synchronize the object with a three-way data binding
+            // click on `index.html` above to see it used in the DOM!
+            syncObject.$bindTo($scope, 'user');
+
+            console.log($scope, this);
         }
 
         setType(type) {
@@ -20,12 +33,19 @@ module MadnessFlash {
 
         makeGuess() {
             if (this.answer === this.guess) {
-                this.valueTwo += 1;
+                if (this.$scope.user.randomize) {
+                    // this.valueOne = random number
+                    this.valueOne = this.randomNumber();
+                    this.valueTwo = this.randomNumber();
+                } else {
+                    this.valueTwo += 1;
 
-                if (this.valueTwo === 13) {
-                    this.valueTwo = 1;
-                    this.valueOne += 1;
+                    if (this.valueTwo === 13) {
+                        this.valueTwo = 1;
+                        this.valueOne += 1;
+                    }
                 }
+                
                 this.$state.go('home.answer');
                 this.guess = null;
                 
@@ -41,6 +61,10 @@ module MadnessFlash {
         reset() {
             this.valueOne = 1;
             this.valueTwo = 1;
+        }
+
+        randomNumber() {
+            return Math.floor(Math.random() * 12);
         }
     }
 

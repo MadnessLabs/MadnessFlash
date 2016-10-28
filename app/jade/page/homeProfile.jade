@@ -1,11 +1,11 @@
 .state-homeProfile
     .form
-        .item.item-image
-            img(src="img/icon.png" alt="")
+        ion-item.item-image
+            img(src="img/icon.png" alt="" ng-click="profile.setData()")
             h1 EmJ
-        .list
-            .item.item-divider.points Points
-            .item
+        ion-list
+            ion-item.item-divider.points Points
+            ion-item
                 .pick
                     .row
                         .col-xs-6
@@ -24,17 +24,17 @@
                             .count
                                 i.icon.slash /
                                 span 2
-            .item.item-divider Information
-            .item.item-input.item-stacked-label
+            ion-item.item-divider Information
+            ion-item.item-input.item-stacked-label
                 label.input-label(for="nickname") Nickname
                 input#nickname(type="text" placeholder="EmJ")
-            .item.item-input.item-stacked-label.item-icon-right
+            ion-item.item-input.item-stacked-label.item-icon-right
                 label.input-label(for="login") Login
                 input#login(type="text" placeholder="Google")
                 a.icon.ion-android-more-vertical.more(ng-click="profile.selectProfilePopover($event)")
-            .item.item-toggle
+            ion-item.item-toggle
                 | Random Numbers
                 label.toggle.toggle-positive
-                    input(type="checkbox")
+                    input(type="checkbox" ng-model="user.randomize")
                     .track
                         .handle
