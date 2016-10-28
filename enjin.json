@@ -75,7 +75,7 @@
     "google": {
         "analytics": {
             "key": false
-        }, 
+        },
         "firebase": {
             "apiKey": "AIzaSyCNfTXxUMRotMYN2w2T9r-a0lgbR_HfgYs",
             "authDomain": "madnessflash-b84ce.firebaseapp.com",
@@ -95,11 +95,11 @@
     "html": {
         "dir": "html/",
         "file": "index.html",
-        "srcDir": "app/jade/",
-        "srcFile": "app.jade",
+        "srcDir": "app/pug/",
+        "srcFile": "app.pug",
         "watch": [
-            "app/jade/**/*.jade",
-            "!app/jade/favicon.jade"
+            "app/pug/**/*.pug",
+            "!app/pug/favicon.pug"
         ]
     },
     "css": {
@@ -177,7 +177,8 @@
             "build/js/controller/**/*.js",
             "build/js/filter/**/*.js",
             "build/js/directive/**/*.js",
-            "build/js/service/**/*.js"
+            "build/js/service/**/*.js",
+            "build/js/page/**/*.js"
         ],
         "watch": [
             "app/ts/**/*.ts"
@@ -195,5 +196,6 @@
         "watch": [
             "resources/**"
         ]
-    }
+    },
+    "type": "madnessionic"
 }

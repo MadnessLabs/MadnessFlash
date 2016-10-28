@@ -2,8 +2,8 @@ doctype html
 html(lang="en")
     head
         title=name
-        link(href="#{css.dir}#{css.file}" rel="stylesheet")
-        include ./favicon.jade
+        link(href=`${css.dir}${css.file}` rel="stylesheet")
+        include ./favicon
         meta(charset="utf-8")
         meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui")
         meta(name="mobile-web-app-capable" content="yes")
@@ -19,7 +19,7 @@ html(lang="en")
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '#{google.analytics.key}', 'auto');
+                ga('create', `${google.analytics.key}`, 'auto');
     body(ng-app=name)
         ion-nav-bar.bar-positive.has-tabs-top
             ion-nav-buttons(side='left')
