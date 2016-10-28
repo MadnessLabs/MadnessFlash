@@ -74,6 +74,12 @@
     "google": {
         "analytics": {
             "key": false
+        }, "firbase": {
+            "apiKey": "AIzaSyCNfTXxUMRotMYN2w2T9r-a0lgbR_HfgYs",
+            "authDomain": "madnessflash-b84ce.firebaseapp.com",
+            "databaseURL": "https://madnessflash-b84ce.firebaseio.com",
+            "storageBucket": "madnessflash-b84ce.appspot.com",
+            "messagingSenderId": "542810022927"
         }
     },
     "db": {
@@ -156,7 +162,8 @@
         "srcDir": "app/ts/",
         "libraries": [
             "node_modules/ionic-sdk/release/js/ionic.bundle.js",
-            "node_modules/ng-cordova/dist/ng-cordova.js"
+            "node_modules/ng-cordova/dist/ng-cordova.js",
+            "node_modules/firebase/firebase.js"
         ],
         "build": [
             "build/js/app.js",

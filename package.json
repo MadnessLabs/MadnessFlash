@@ -50,5 +50,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "com.ionic.keyboard"
-  ]
+  ],
+  "dependencies": {
+    "firebase": "^3.5.2"
+  }
 }

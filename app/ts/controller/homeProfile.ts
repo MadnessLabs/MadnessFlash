@@ -5,9 +5,11 @@ module MadnessFlash {
     class HomeProfileController {
         popover: any;
 
-        constructor(protected $scope, protected $ionicPopover) {
+        constructor(protected $scope, protected $ionicPopover, firebase, protected enjin) {
             // ON LOAD  
             
+            firebase.initializeApp(enjin.google.firebase);
+
             this.$ionicPopover.fromTemplateUrl('html/popover/profileLogin.html', {
                 scope: this.$scope,
                 'backdropClickToClose': true
