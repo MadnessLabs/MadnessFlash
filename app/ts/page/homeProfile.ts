@@ -11,7 +11,7 @@ module MadnessFlash {
             protected $ionicPopover, 
             protected enjin
         ) {
-            // ON LOAD  
+            // ON LOAD 
 
             this.$ionicPopover.fromTemplateUrl('html/popover/profileLogin.html', {
                 scope: this.$scope,
