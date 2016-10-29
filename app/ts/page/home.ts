@@ -15,7 +15,6 @@ module MadnessFlash {
         constructor(protected $state, protected enjin, protected $scope) {
             // ON LOAD 
             this.reset();
-            
             this.enjin.database.get('users/0').$bindTo($scope, 'ctrl.user');
         }
 

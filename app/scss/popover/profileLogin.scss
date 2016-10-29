@@ -4,8 +4,12 @@
 // PAGE STYLES
 .popover-profileLogin{
 
-    height: 162px;
-    
+    position: relative;
+    height: auto;
+    left: 0 auto !important;
+    top: 190px !important;
+    overflow: visible;
+
     .google{
         position: absolute;
         left: 20px;
