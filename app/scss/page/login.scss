@@ -2,32 +2,21 @@
 @import "../variables";
 
 // PAGE STYLES
-.popover-profileLogin{
+.page-login {
 
-    position: relative;
-    height: auto;
-    left: 0 auto !important;
-    top: 190px !important;
-    overflow: visible;
-
+    position: absolute;
+    
     .google{
         position: absolute;
-        left: 20px;
-    }
-    .ion-android-checkbox-outline.googleCheckbox{
-        color: #dd4b39;
+        right: 25px;
     }
     .facebook{
         color: #3b5998;
-    }
-    .ion-android-checkbox-outline.facebookCheckbox{
-        color: #3b5998;
+        right: 20px;
     }
     .twitter{
         color: #00aced;
-    }
-    .ion-android-checkbox-outline.twitterCheckbox{
-        color: #00aced;
+        right: 20px;
     }
     h2{
         padding-left: 20px;

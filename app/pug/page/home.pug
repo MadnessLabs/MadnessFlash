@@ -2,4 +2,4 @@ ion-view(view-title='MadnessFlash')
     ion-content.state-home.has-header(padding="true")
         .card
             ui-view(name="card")
-            
+        button.button.button-block.button-primary(ui-sref="login" ng-hide="$root.isAuthenticated") Login

@@ -22,7 +22,10 @@ module MadnessFlash {
 'controller':'MadnessFlash.HomeEquationController as equation'}}})
 				.state('home.answer', {'url':'/answer', 
 'views':{'card':{'templateUrl':'html/page/homeAnswer.html', 
-'controller':'MadnessFlash.HomeAnswerController as answer'}}});
+'controller':'MadnessFlash.HomeAnswerController as answer'}}})
+				.state('login', {'url':'/login', 
+'templateUrl':'html/page/login.html', 
+'controller':'MadnessFlash.LoginController as ctrl'});
 
             $urlRouterProvider.otherwise(function($injector, $location) {
                 var $state = $injector.get('$state');

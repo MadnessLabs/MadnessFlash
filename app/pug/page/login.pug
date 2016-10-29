@@ -1,0 +1,13 @@
+ion-view.page-login(view-title='Login')
+    ion-content
+        .card
+            ion-list
+                .item.item-icon-right(ng-click="ctrl.login('google')")
+                    img.google(class="a12n-provider-icon" ng-src="//www.gstatic.com/mobilesdk/160512_mobilesdk/auth_service_google.svg" src="//www.gstatic.com/mobilesdk/160512_mobilesdk/auth_service_google.svg") 
+                    h2 Google 
+                .item.item-icon-right(ng-click="ctrl.login('facebook')")
+                    i.icon.ion-social-facebook.facebook
+                    h2 Facebook
+                .item.item-icon-right(ng-click="ctrl.login('twitter')")
+                    i.icon.ion-social-twitter.twitter
+                    h2 Twitter

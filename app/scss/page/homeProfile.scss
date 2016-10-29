@@ -50,10 +50,13 @@
             }
         }
     }
-    a.more{
-        color: #666666;
-        display: -webkit-box;
-    } 
+    .login{
+        color: #6E6E6E;
+    }
+    .provider{
+        padding: 8px 0;
+    }
+    
     
     @media (max-width: $screen-xl) {
 
