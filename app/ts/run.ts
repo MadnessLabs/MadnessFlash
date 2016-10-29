@@ -60,6 +60,14 @@ module MadnessFlash {
                     $ionicSideMenuDelegate.toggleLeft();
                 };
             });
+
+            $rootScope.openProfile = function () {
+                if ($rootScope.isAuthenticated) {
+                    $state.go('home.profile');
+                } else {
+                    $state.go('login');
+                }
+            };
         }
     }
     angular.module('MadnessFlash').run(AppRunner);
