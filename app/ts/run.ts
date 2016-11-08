@@ -6,6 +6,7 @@ module MadnessFlash {
 
     class AppRunner {
         constructor(
+			FireEnjin,
             $ionicPlatform, 
             $cordovaKeyboard, 
             $cordovaSplashscreen, 
@@ -14,10 +15,8 @@ module MadnessFlash {
             $state, 
             $ionicLoading, 
             $ionicSideMenuDelegate,
-            Firebase,
             $http
         ) {
-            Firebase.start();
 
             $rootScope.host = {
                 api: enjin.db.api.host.slice(0, -3),

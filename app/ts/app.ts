@@ -5,7 +5,8 @@
         'MadnessFlash.config', 
         'ionic', 
 		'ngCordova', 
-		'firebase'
+		'firebase', 
+		'ngCordovaOauth'
     ]);
 
 })();
