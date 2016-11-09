@@ -4,13 +4,17 @@ module MadnessFlash {
     'use strict';
 
     class HomeProfileController {
+        parent: any;
 
         constructor(
             protected $scope, 
             protected enjin
         ) {
             // ON LOAD 
-         
+        }
+
+        logout() {
+            this.enjin.auth.logout();
         }
     }
 

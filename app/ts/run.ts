@@ -61,7 +61,7 @@ module MadnessFlash {
             });
 
             $rootScope.openProfile = function () {
-                if ($rootScope.isAuthenticated) {
+                if (enjin.session) {
                     $state.go('home.profile');
                 } else {
                     $state.go('login');

@@ -21,7 +21,8 @@
             "abstract": true,
             "url": "/home",
             "templateUrl": "html/page/home.html",
-            "controller": "MadnessFlash.HomeController as ctrl"
+            "controller": "MadnessFlash.HomeController as ctrl",
+            "resolve": "AuthResolver"
         },
         {
             "state": "home.welcome",
@@ -187,6 +188,7 @@
         "build": [
             "build/js/app.js",
             "build/js/run.js",
+            "build/js/resolver/**/*.js",
             "build/js/router.js",
             "build/js/config.js",
             "app/js/**/*.js",

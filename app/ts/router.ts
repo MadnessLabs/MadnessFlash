@@ -9,6 +9,7 @@ module MadnessFlash {
                     'url': '/home',
 					'templateUrl': 'html/page/home.html',
 					'controller': 'MadnessFlash.HomeController as ctrl',
+					'resolve': new AuthResolver,
 					'abstract': true
                 }).state('home.welcome', {
                     'url': '/welcome',

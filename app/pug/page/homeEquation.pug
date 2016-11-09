@@ -4,4 +4,4 @@
     a.button.icon.icon-left.ion-chevron-left.back(ui-sref="home.pick") Back
     a.button.icon.icon-right.ion-chevron-right.answer(ng-click="ctrl.makeGuess()") Answer
     .form
-        input.guess(type="number" placeholder="3" required="" ng-model="ctrl.guess" ng-class="{'right': ctrl.answer.toFixed(3) == ctrl.guess, 'wrong': ctrl.answer.toFixed(3) != ctrl.guess}")
+        input.guess(type="number" placeholder="3" required="" ng-model="ctrl.guess" ng-class="{'right': ctrl.answer == ctrl.guess, 'wrong': ctrl.answer != ctrl.guess}")

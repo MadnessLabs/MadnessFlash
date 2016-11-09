@@ -1,8 +1,8 @@
 .state-homeProfile
     .form
         ion-item.item-image
-            img(src="img/icon.png" alt="" ng-click="profile.setData()")
-            h1 EmJ
+            img(ng-src="{{ctrl.user.photo}}" alt="Provider has no Image") 
+            h1 {{ctrl.user.name}}
         ion-list
             ion-item.item-divider.points Points
             ion-item
@@ -11,30 +11,28 @@
                         .col-xs-6
                             .count
                                 i.icon.ion-plus
-                                span 20
+                                span {{ctrl.user.points.addition}}
                         .col-xs-6
                             .count
                                 i.icon.ion-minus
-                                span 10
+                                span {{ctrl.user.points.subtraction}}
                         .col-xs-6
                             .count
                                 i.icon.ion-asterisk
-                                span 5
+                                span {{ctrl.user.points.multiplication}}
                         .col-xs-6
                             .count
                                 i.icon.slash /
-                                span 2
+                                span {{ctrl.user.points.division}}
             ion-item.item-divider Information
-            ion-item.item-input.item-stacked-label
-                label.input-label(for="nickname") Nickname
-                input#nickname(type="text" placeholder="EmJ")
             ion-item.item-input.item-stacked-label.item-icon-right
                 h2.login Login
                 .provider    
-                    span Google
+                    span {{ctrl.user.provider}}
             ion-item.item-toggle
                 | Random Numbers
                 label.toggle.toggle-positive
                     input(type="checkbox" ng-model="ctrl.user.randomize")
                     .track
                         .handle
+    button.button.button-full.button-outline.icon.icon-right.ion-log-out(ng-click="profile.logout()") Logout

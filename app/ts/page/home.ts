@@ -8,23 +8,38 @@ module MadnessFlash {
         valueTwo: number;
         type: string;
         answer: number;
-        guess: number;
+        guess: any;
         randomize: any;
         user: any;
 
         constructor(protected $state, protected enjin, protected $scope) {
             // ON LOAD 
             this.reset();
-            this.enjin.database.get('users/0').$bindTo($scope, 'ctrl.user');
+
+            this.enjin.database.get('user/' + this.enjin.session.user.uid).$bindTo($scope, 'ctrl.user');
+            
         }
 
         setType(type) {
             this.type = type;
+            this.enjin.database.update('user/' + this.enjin.session.user.uid, {
+                type: type
+            });
         }
 
         makeGuess() {
             if (this.answer === this.guess) {
-                if (this.$scope.user.randomize) {
+                if (!this.user.points) {
+                    this.user.points = {
+                        addition: 0,
+                        subtraction: 0,
+                        multiplication: 0,
+                        division: 0
+                    };
+                }
+                this.user.points[this.type] += 1;
+                this.enjin.database.update('user/' + this.enjin.session.user.uid + '/points', this.user.points);
+                if (this.user.randomize) {
                     // this.valueOne = random number
                     this.valueOne = this.randomNumber();
                     this.valueTwo = this.randomNumber();
@@ -46,7 +61,7 @@ module MadnessFlash {
         }
 
         setAnswer(number) {
-            this.answer = number;
+            this.answer = Math.round(number * 1000) / 1000;
         }
 
         reset() {
